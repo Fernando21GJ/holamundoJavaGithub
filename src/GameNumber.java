@@ -7,7 +7,6 @@ import java.util.Stack;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Ferna
@@ -29,13 +28,15 @@ public class GameNumber {
         }
         return prime;
     }
-    
-    public static boolean isPair(int numberPair){
+
+    public static boolean isPair(int numberPair) {
         return numberPair % 2 == 0;
     }
-       public static boolean isNotPair(int numberNotPair){
+
+    public static boolean isNotPair(int numberNotPair) {
         return numberNotPair % 2 != 0;
     }
+
     public static void main(String args[]) {
         //instanciamos la clase scanner
         Scanner teclado = new Scanner(System.in);
@@ -62,26 +63,26 @@ public class GameNumber {
                 }
             }
         }
-        for(int j = 1; j <= 100; j++){
-            if(max!=bucket2.size()){
-                if(isPair(j)){
+        for (int j = 1; j <= 100; j++) {
+            if (max != bucket2.size()) {
+                if (isPair(j)) {
                     bucket2.push(j);
                     saving++;
                 }
             }
         }
-                for(int k = 1; k <= 100; k++){
-            if(max!=bucket3.size()){
-                if(isNotPair(k)){
+        for (int k = 1; k <= 100; k++) {
+            if (max != bucket3.size()) {
+                if (isNotPair(k)) {
                     bucket3.push(k);
                     saving++;
                 }
             }
         }
         //System.out.println("");
-        System.out.println("Son numeros Primos :"+ "  "+bucket);
-        System.out.println("Son numeros Pares :"+ "  "+bucket2);
-        System.out.println("Son numeros Impares :"+ "  "+bucket3);
+        System.out.println("Son numeros Primos :" + "  " + bucket);
+        System.out.println("Son numeros Pares :" + "  " + bucket2);
+        System.out.println("Son numeros Impares :" + "  " + bucket3);
         // System.out.println(bucket.size());
     }
 }
